@@ -27,8 +27,7 @@ public class Venda {
 
     private Date dataVenda;
 
-     @OneToMany(cascade = CascadeType.ALL
-    , mappedBy = "venda", targetEntity = ItensVenda.class)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "venda", targetEntity = ItensVenda.class)
     private List<ItensVenda> produtos = new ArrayList<>();
 
 }
