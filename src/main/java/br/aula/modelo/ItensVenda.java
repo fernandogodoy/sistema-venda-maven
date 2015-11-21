@@ -1,28 +1,23 @@
 package br.aula.modelo;
 
-import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author Fernando
  */
-@Entity
-public class Cliente {
+public class ItensVenda {
     
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    private String nome;
-    
-    private String rg;
-    
-    private String cpf;
-    
+
+    @ManyToOne
+    private Produto produto;
+
+    @ManyToOne
+    private Venda venda;
 }
